@@ -1,0 +1,4 @@
+# Dynamic Test-Subset Routing Core Dependencies
+click>=8.1.7
+networkx>=3.2.1
+pydantic>=2.0.0

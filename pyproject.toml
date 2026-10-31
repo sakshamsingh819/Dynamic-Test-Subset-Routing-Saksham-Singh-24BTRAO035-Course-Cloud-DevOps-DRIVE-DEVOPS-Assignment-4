@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-test-subset-routing"
+version = "1.0.0"
+authors = [
+  { name="Saksham Singh", email="sakshamsingh819@gmail.com" },
+]
+description = "Dynamic Test-Subset Routing Engine: Intelligent AST & Impact-Based Test Selection and CI Sharding"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "click>=8.1.7",
+  "networkx>=3.2.1",
+  "pydantic>=2.0.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    ".",
+    "src",
+]

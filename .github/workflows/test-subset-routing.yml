@@ -1,0 +1,111 @@
+name: Dynamic Test-Subset Routing CI
+
+on:
+  pull_request:
+    branches: [ main, master, develop ]
+  push:
+    branches: [ main, feature/** ]
+
+jobs:
+  analyze-and-route:
+    name: "DTSR: Impact Analysis & Sharding Matrix"
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      strategy: ${{ steps.route.outputs.strategy }}
+      time_saved: ${{ steps.route.outputs.time_saved }}
+      routed_count: ${{ steps.route.outputs.routed_count }}
+    steps:
+      - name: Checkout Code Repository (Full History)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies & DTSR Package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+          pip install -e .
+
+      - name: Compute Dynamic Test Route
+        id: route
+        run: |
+          BASE_REF="${{ github.event.pull_request.base.sha }}"
+          if [ -z "$BASE_REF" ]; then
+            BASE_REF="HEAD~1"
+          fi
+          echo "Evaluating changes between $BASE_REF and ${{ github.sha }}..."
+          python -m src.dtsr.cli route --base "$BASE_REF" --head "HEAD" --shards 2 > routing_summary.txt
+          cat routing_summary.txt
+
+          # Parse JSON output for CI metrics
+          ROUTING_JSON=$(python -m src.dtsr.cli route --base "$BASE_REF" --head "HEAD" --shards 2 --json-out)
+          STRATEGY=$(echo "$ROUTING_JSON" | python -c "import sys, json; print(json.load(sys.stdin)['strategy_applied'])")
+          SAVED=$(echo "$ROUTING_JSON" | python -c "import sys, json; print(json.load(sys.stdin)['time_saved_percent'])")
+          COUNT=$(echo "$ROUTING_JSON" | python -c "import sys, json; print(json.load(sys.stdin)['routed_test_count'])")
+          
+          echo "strategy=$STRATEGY" >> $GITHUB_OUTPUT
+          echo "time_saved=$SAVED" >> $GITHUB_OUTPUT
+          echo "routed_count=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Generate Parallel CI Sharding Matrix
+        id: set-matrix
+        run: |
+          BASE_REF="${{ github.event.pull_request.base.sha }}"
+          if [ -z "$BASE_REF" ]; then
+            BASE_REF="HEAD~1"
+          fi
+          MATRIX_PAYLOAD=$(python -m src.dtsr.cli ci-matrix --base "$BASE_REF" --head "HEAD" --shards 2)
+          echo "Generated matrix: $MATRIX_PAYLOAD"
+          echo "matrix=$MATRIX_PAYLOAD" >> $GITHUB_OUTPUT
+
+      - name: Publish Route Step Summary
+        run: |
+          echo "## ⚡ Dynamic Test-Subset Routing (DTSR) Report" >> $GITHUB_STEP_SUMMARY
+          echo "**Candidate**: Saksham Singh (24BTRAO035) | **Department**: AI DRIVE DEVOPS" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Routing Strategy** | \`${{ steps.route.outputs.strategy }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Test Suites Routed** | \`${{ steps.route.outputs.routed_count }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Compute / Time Saved** | \`${{ steps.route.outputs.time_saved }}%\` |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "```text" >> $GITHUB_STEP_SUMMARY
+          cat routing_summary.txt >> $GITHUB_STEP_SUMMARY
+          echo "```" >> $GITHUB_STEP_SUMMARY
+
+  execute-shards:
+    name: "Runner Shard #${{ matrix.shard_id }}"
+    needs: analyze-and-route
+    if: needs.analyze-and-route.outputs.routed_count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix: ${{ fromJson(needs.analyze-and-route.outputs.matrix) }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Runtime & Test Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+          pip install -e .
+
+      - name: Run Assigned Test Shard
+        run: |
+          echo "Executing Shard #${{ matrix.shard_id }} (${{ matrix.test_count }} tests)..."
+          echo "Test arguments: ${{ matrix.tests_args }}"
+          pytest -v --durations=5 ${{ matrix.tests_args }}

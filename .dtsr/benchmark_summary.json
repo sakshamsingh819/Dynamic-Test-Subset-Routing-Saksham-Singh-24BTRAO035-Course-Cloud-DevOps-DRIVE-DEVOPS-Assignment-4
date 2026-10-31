@@ -1,0 +1,251 @@
+{
+  "candidate": "Saksham Singh",
+  "usn": "24BTRAO035",
+  "timestamp": 1793424961.9241214,
+  "total_scenarios": 5,
+  "total_test_suites": 16,
+  "overall_time_saved_percent": 43.0,
+  "cumulative_baseline_sec": 8.9,
+  "cumulative_dtsr_sec": 5.07,
+  "scenarios": [
+    {
+      "id": "PR-01",
+      "title": "Documentation & Schema Docs Update",
+      "change_type": "DOCS_ONLY",
+      "strategy": "NONE",
+      "changed_files": [
+        "README.md",
+        "docs/architecture.md",
+        "docs/api_spec.json"
+      ],
+      "churn": 45,
+      "full_suite_count": 16,
+      "routed_count": 0,
+      "baseline_duration_sec": 1.78,
+      "routed_duration_sec": 0.0,
+      "time_saved_percent": 100.0,
+      "selected_tests": [],
+      "shard_plan": null
+    },
+    {
+      "id": "PR-02",
+      "title": "Email Regex Validator Hardening",
+      "change_type": "CODE_CHANGE",
+      "strategy": "SMART",
+      "changed_files": [
+        "src/utils/validators.py"
+      ],
+      "churn": 18,
+      "full_suite_count": 16,
+      "routed_count": 8,
+      "baseline_duration_sec": 1.78,
+      "routed_duration_sec": 1.39,
+      "time_saved_percent": 21.9,
+      "selected_tests": [
+        "tests/unit/test_validators.py",
+        "tests/unit/test_order.py",
+        "tests/unit/test_auth.py",
+        "tests/unit/test_notifications.py",
+        "tests/unit/test_billing.py",
+        "tests/integration/test_checkout_flow.py",
+        "tests/integration/test_auth_audit.py",
+        "tests/system/test_end_to_end.py"
+      ],
+      "shard_plan": {
+        "num_shards": 2,
+        "total_duration_sec": 1.39,
+        "max_shard_duration_sec": 0.71,
+        "imbalance_ratio": 1.022,
+        "shards": [
+          {
+            "shard_id": 1,
+            "test_count": 4,
+            "estimated_duration_sec": 0.71,
+            "tests": [
+              "tests/system/test_end_to_end.py",
+              "tests/unit/test_auth.py",
+              "tests/unit/test_notifications.py",
+              "tests/unit/test_validators.py"
+            ]
+          },
+          {
+            "shard_id": 2,
+            "test_count": 4,
+            "estimated_duration_sec": 0.68,
+            "tests": [
+              "tests/integration/test_checkout_flow.py",
+              "tests/integration/test_auth_audit.py",
+              "tests/unit/test_order.py",
+              "tests/unit/test_billing.py"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "PR-03",
+      "title": "Tiered Volume Discount Logic Refactor",
+      "change_type": "CODE_CHANGE",
+      "strategy": "SMART",
+      "changed_files": [
+        "src/services/billing.py"
+      ],
+      "churn": 32,
+      "full_suite_count": 16,
+      "routed_count": 4,
+      "baseline_duration_sec": 1.78,
+      "routed_duration_sec": 1.01,
+      "time_saved_percent": 43.3,
+      "selected_tests": [
+        "tests/unit/test_billing.py",
+        "tests/unit/test_order.py",
+        "tests/integration/test_checkout_flow.py",
+        "tests/system/test_end_to_end.py"
+      ],
+      "shard_plan": {
+        "num_shards": 2,
+        "total_duration_sec": 1.01,
+        "max_shard_duration_sec": 0.55,
+        "imbalance_ratio": 1.089,
+        "shards": [
+          {
+            "shard_id": 1,
+            "test_count": 1,
+            "estimated_duration_sec": 0.55,
+            "tests": [
+              "tests/system/test_end_to_end.py"
+            ]
+          },
+          {
+            "shard_id": 2,
+            "test_count": 3,
+            "estimated_duration_sec": 0.46,
+            "tests": [
+              "tests/integration/test_checkout_flow.py",
+              "tests/unit/test_order.py",
+              "tests/unit/test_billing.py"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "PR-04",
+      "title": "HMAC Token Cryptography Security Patch",
+      "change_type": "CODE_CHANGE",
+      "strategy": "SMART",
+      "changed_files": [
+        "src/utils/crypto.py"
+      ],
+      "churn": 24,
+      "full_suite_count": 16,
+      "routed_count": 4,
+      "baseline_duration_sec": 1.78,
+      "routed_duration_sec": 0.89,
+      "time_saved_percent": 50.0,
+      "selected_tests": [
+        "tests/unit/test_crypto.py",
+        "tests/unit/test_auth.py",
+        "tests/integration/test_auth_audit.py",
+        "tests/system/test_end_to_end.py"
+      ],
+      "shard_plan": {
+        "num_shards": 2,
+        "total_duration_sec": 0.89,
+        "max_shard_duration_sec": 0.55,
+        "imbalance_ratio": 1.236,
+        "shards": [
+          {
+            "shard_id": 1,
+            "test_count": 1,
+            "estimated_duration_sec": 0.55,
+            "tests": [
+              "tests/system/test_end_to_end.py"
+            ]
+          },
+          {
+            "shard_id": 2,
+            "test_count": 3,
+            "estimated_duration_sec": 0.34,
+            "tests": [
+              "tests/integration/test_auth_audit.py",
+              "tests/unit/test_auth.py",
+              "tests/unit/test_crypto.py"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "PR-05",
+      "title": "Core Dependency Manifest Bump",
+      "change_type": "INFRA_CONFIG",
+      "strategy": "ALL",
+      "changed_files": [
+        "requirements.txt"
+      ],
+      "churn": 8,
+      "full_suite_count": 16,
+      "routed_count": 16,
+      "baseline_duration_sec": 1.78,
+      "routed_duration_sec": 1.78,
+      "time_saved_percent": 0.0,
+      "selected_tests": [
+        "tests/dtsr/test_ast_graph.py",
+        "tests/dtsr/test_git_analyzer.py",
+        "tests/dtsr/test_impact_tracer.py",
+        "tests/dtsr/test_risk_scorer.py",
+        "tests/dtsr/test_router.py",
+        "tests/dtsr/test_sharder.py",
+        "tests/integration/test_auth_audit.py",
+        "tests/integration/test_checkout_flow.py",
+        "tests/system/test_end_to_end.py",
+        "tests/unit/test_auth.py",
+        "tests/unit/test_billing.py",
+        "tests/unit/test_crypto.py",
+        "tests/unit/test_inventory.py",
+        "tests/unit/test_notifications.py",
+        "tests/unit/test_order.py",
+        "tests/unit/test_validators.py"
+      ],
+      "shard_plan": {
+        "num_shards": 2,
+        "total_duration_sec": 1.78,
+        "max_shard_duration_sec": 0.9,
+        "imbalance_ratio": 1.011,
+        "shards": [
+          {
+            "shard_id": 1,
+            "test_count": 7,
+            "estimated_duration_sec": 0.88,
+            "tests": [
+              "tests/system/test_end_to_end.py",
+              "tests/unit/test_auth.py",
+              "tests/dtsr/test_ast_graph.py",
+              "tests/dtsr/test_git_analyzer.py",
+              "tests/dtsr/test_risk_scorer.py",
+              "tests/dtsr/test_sharder.py",
+              "tests/unit/test_notifications.py"
+            ]
+          },
+          {
+            "shard_id": 2,
+            "test_count": 9,
+            "estimated_duration_sec": 0.9,
+            "tests": [
+              "tests/integration/test_checkout_flow.py",
+              "tests/integration/test_auth_audit.py",
+              "tests/unit/test_order.py",
+              "tests/unit/test_billing.py",
+              "tests/dtsr/test_impact_tracer.py",
+              "tests/dtsr/test_router.py",
+              "tests/unit/test_inventory.py",
+              "tests/unit/test_crypto.py",
+              "tests/unit/test_validators.py"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

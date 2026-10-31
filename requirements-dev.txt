@@ -1,0 +1,7 @@
+# Development, Testing & Report Generation Requirements
+-r requirements.txt
+pytest>=8.0.0
+pytest-cov>=4.1.0
+weasyprint>=60.0
+reportlab>=4.0.0
+python-docx>=1.1.0
