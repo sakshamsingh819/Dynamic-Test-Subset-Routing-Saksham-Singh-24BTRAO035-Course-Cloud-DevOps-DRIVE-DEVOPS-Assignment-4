@@ -22,7 +22,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     size: A4;
     margin: 16mm 14mm 18mm 14mm;
     @top-left {
-      content: "JAIN (DEEMED-TO-BE UNIVERSITY) • DEPT OF CSE • AI DRIVEN DEVOPS";
+      content: "JAIN (DEEMED-TO-BE UNIVERSITY) • AUTOMATION SOFTWARE • AI DRIVEN DEVOPS";
       font-size: 7.5pt;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #64748b;
@@ -35,7 +35,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       color: #64748b;
     }
     @bottom-left {
-      content: "Academic Laboratory Dossier • Branch: AI DRIVEN DEVOPS";
+      content: "Academic Laboratory Dossier • Course: Automation Software";
       font-size: 7.5pt;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #64748b;
@@ -383,7 +383,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <div class="institution-header">
   <div class="univ-title">Jain (Deemed-to-be University)</div>
   <div class="dept-title">Faculty of Engineering and Technology • Department of Computer Science and Engineering</div>
-  <div class="course-badge">Branch: B.Tech CSE (AI DRIVEN DEVOPS) • Assignment 4 (Activity 3)</div>
+  <div class="course-badge">Course: Automation Software • Branch: B.Tech CSE (AI DRIVEN DEVOPS) • Assignment 4</div>
 </div>
 
 <!-- Header Box -->
@@ -404,8 +404,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       <div class="meta-value">AI DRIVEN DEVOPS</div>
     </div>
     <div class="meta-col">
-      <div class="meta-label">Verification Status</div>
-      <div class="meta-value">100% Passed (61/61 Suites)</div>
+      <div class="meta-label">Course / Subject</div>
+      <div class="meta-value">Automation Software</div>
     </div>
   </div>
   
@@ -1057,7 +1057,7 @@ git push -u origin main</div>
 <hr style="border: none; border-top: 1.5px solid #cbd5e1; margin-top: 16px;">
 <div style="font-size: 7.8pt; color: #64748b; text-align: center;">
   <strong>Jain (Deemed-to-be University)</strong> • Faculty of Engineering and Technology • Department of Computer Science & Engineering<br>
-  Candidate: <strong>Saksham Singh</strong> (USN: <strong>24BTRAO035</strong>) • Branch: <strong>AI DRIVEN DEVOPS</strong> • October 2026
+  Candidate: <strong>Saksham Singh</strong> (USN: <strong>24BTRAO035</strong>) • Course: <strong>Automation Software</strong> • Branch: <strong>AI DRIVEN DEVOPS</strong> • October 2026
 </div>
 
 </body>
