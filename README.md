@@ -8,7 +8,7 @@
 
 **Candidate**: Saksham Singh  
 **USN / Student ID**: 24BTRAO035  
-**Specialization**: AI • DRIVE DEVOPS  
+**Branch**: AI DRIVEN DEVOPS  
 **Course**: Cloud DevOps (Unit III/IV Practicum)  
 **Repository**: [https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4](https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4)  
 **Dossier Report**: [`Dynamic_Test_Subset_Routing_Learnings_Report.pdf`](Dynamic_Test_Subset_Routing_Learnings_Report.pdf) | [`LEARNING_DOCUMENT.md`](LEARNING_DOCUMENT.md)

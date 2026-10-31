@@ -1,7 +1,8 @@
 """
 Academic Dossier & PDF Report Generator for Dynamic Test-Subset Routing
-Author: Saksham Singh (24BTRAO035) | AI DRIVE DEVOPS
-Course: 24CSE538 — Cloud DevOps | Department of Computer Science & Engineering
+Author: Saksham Singh (24BTRAO035)
+Branch: AI DRIVEN DEVOPS | Department of Computer Science & Engineering
+Jain (Deemed-to-be University)
 """
 import os
 import sys
@@ -21,7 +22,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     size: A4;
     margin: 18mm 16mm 20mm 16mm;
     @top-left {
-      content: "JAIN (DEEMED-TO-BE UNIVERSITY) • DEPT OF CSE • CLOUD DEVOPS";
+      content: "JAIN (DEEMED-TO-BE UNIVERSITY) • DEPT OF CSE • AI DRIVEN DEVOPS";
       font-size: 7.5pt;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #64748b;
@@ -34,7 +35,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       color: #64748b;
     }
     @bottom-left {
-      content: "Academic Laboratory Dossier • AI DRIVE DEVOPS Track";
+      content: "Academic Laboratory Dossier • Branch: AI DRIVEN DEVOPS";
       font-size: 7.5pt;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #64748b;
@@ -148,15 +149,36 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   }
 
   .repo-link-box {
-    background: #0f172a;
+    background: #0b1528;
     color: #38bdf8;
-    padding: 6px 10px;
-    border-radius: 4px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #1e3a8a;
+    border-left: 4px solid #38bdf8;
+  }
+
+  .repo-link-box a {
+    color: #38bdf8;
+    text-decoration: underline;
+    font-weight: bold;
     font-family: 'Consolas', monospace;
-    font-size: 7.5pt;
-    margin-top: 8px;
+    font-size: 7.8pt;
     word-break: break-all;
-    border-left: 3px solid #38bdf8;
+  }
+
+  .btn-open-repo {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 7.5pt;
+    margin-top: 5px;
+    letter-spacing: 0.3px;
+    border: 1px solid #60a5fa;
   }
 
   h2 {
@@ -281,6 +303,23 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     text-align: justify;
   }
 
+  .submission-card {
+    background: #eff6ff;
+    border: 1.5px solid #3b82f6;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .submission-card a {
+    color: #1d4ed8;
+    font-weight: bold;
+    font-size: 8.5pt;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
   .page-break {
     page-break-before: always;
   }
@@ -292,7 +331,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <div class="institution-header">
   <div class="univ-title">Jain (Deemed-to-be University)</div>
   <div class="dept-title">Faculty of Engineering and Technology • Department of Computer Science and Engineering</div>
-  <div class="course-badge">Course: 24CSE538 — Cloud DevOps • Laboratory Assignment 4 (Activity 3)</div>
+  <div class="course-badge">Branch: AI DRIVEN DEVOPS • Assignment 4 (Activity 3)</div>
 </div>
 
 <!-- Header Box -->
@@ -309,27 +348,43 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       <div class="meta-value">24BTRAO035</div>
     </div>
     <div class="meta-col">
-      <div class="meta-label">Specialization / Track</div>
-      <div class="meta-value">AI • DRIVE DEVOPS</div>
+      <div class="meta-label">Branch / Track</div>
+      <div class="meta-value">AI DRIVEN DEVOPS</div>
     </div>
     <div class="meta-col">
-      <div class="meta-label">Status & Verification</div>
+      <div class="meta-label">Verification Status</div>
       <div class="meta-value">100% Passed (61/61 Suites)</div>
     </div>
   </div>
+  
   <div class="repo-link-box">
-    <strong>Verified GitHub Repository:</strong><br>
-    https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4
+    <div style="font-size: 7pt; color: #93c5fd; text-transform: uppercase; font-weight: bold; margin-bottom: 3px;">
+      🔗 DIRECT GITHUB REPOSITORY LINK (CLICK TO OPEN IN BROWSER):
+    </div>
+    <a href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
+      https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4
+    </a>
+    <div style="margin-top: 4px;">
+      <a class="btn-open-repo" href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
+        🚀 CLICK HERE TO OPEN GITHUB REPO IN BROWSER &rarr;
+      </a>
+    </div>
   </div>
 </div>
 
 <!-- 1. Executive Summary & Problem Formulation -->
 <h2>1. Executive Summary & Problem Formulation</h2>
 <p>
-In modern Continuous Integration and Continuous Deployment (CI/CD) environments, monolithic test execution on every commit introduces severe development bottlenecks. As enterprise codebases grow, executing full automated regression suites on every commit inflates runner queue times, wastes compute credits, and impairs developer feedback loops.
+In modern Continuous Integration and Continuous Deployment (CI/CD) environments, monolithic test execution on every
+commit introduces severe development bottlenecks. As enterprise codebases grow, executing full automated regression suites
+on every commit inflates runner queue times, wastes compute credits, and impairs developer feedback loops.
 </p>
 <p>
-This project designs, implements, and benchmarks an enterprise-grade <strong>Dynamic Test-Subset Routing (DTSR)</strong> system. DTSR synthesizes static <strong>Abstract Syntax Tree (AST) import dependency graphs</strong> with dynamic <strong>Test Impact Analysis (TIA) runtime coverage tracing</strong>, <strong>predictive risk scoring</strong>, and <strong>Longest Processing Time (LPT) parallel sharding</strong>. Across 5 empirical pull request archetypes, DTSR achieved an <strong>overall 43.0% reduction in CI execution duration</strong> (saving 100% on documentation changes) with an empirical <strong>zero escape rate</strong>.
+This project designs, implements, and benchmarks an enterprise-grade <strong>Dynamic Test-Subset Routing (DTSR)</strong> system.
+DTSR synthesizes static <strong>Abstract Syntax Tree (AST) import dependency graphs</strong> with dynamic <strong>Test Impact Analysis (TIA)
+runtime coverage tracing</strong>, <strong>predictive risk scoring</strong>, and <strong>Longest Processing Time (LPT) parallel sharding</strong>. Across 5
+empirical pull request archetypes, DTSR achieved an <strong>overall 43.0% reduction in CI execution duration</strong> (saving 100% on
+documentation changes) with an empirical <strong>zero escape rate</strong>.
 </p>
 
 <!-- 2. Theoretical Foundations -->
@@ -620,16 +675,29 @@ Through the end-to-end implementation and benchmarking of Dynamic Test-Subset Ro
 The repository is fully provisioned with Git history and configured with the candidate's exact remote repository URL:
 </p>
 
+<div class="submission-card">
+  <div style="font-weight: bold; color: #1e40af; font-size: 9pt; margin-bottom: 3px;">
+    🔗 Official GitHub Repository Submission Link (Click to Open in Browser):
+  </div>
+  <a href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
+    https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4
+  </a>
+  <div style="margin-top: 6px;">
+    <a class="btn-open-repo" href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
+      🌐 DIRECT LAUNCH REPOSITORY IN BROWSER &rarr;
+    </a>
+  </div>
+</div>
+
 <div class="code-block"># Repository Location and Status Check
 cd "/home/saksham/Pictures/A4 A3"
-git status
 
-# Cloned and Linked Remote Target
+# Cloned and Linked Remote Target (Saksham Singh - AI DRIVEN DEVOPS)
 git remote add origin https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4.git
 
 # Push Complete Foundation to GitHub
 git branch -M main
-git push -u origin main --force</div>
+git push -u origin main</div>
 
 <table>
   <tr>
@@ -662,7 +730,7 @@ git push -u origin main --force</div>
 <hr style="border: none; border-top: 1.5px solid #cbd5e1; margin-top: 20px;">
 <div style="font-size: 8pt; color: #64748b; text-align: center;">
   <strong>Jain (Deemed-to-be University)</strong> • Faculty of Engineering and Technology • Department of Computer Science & Engineering<br>
-  Candidate: <strong>Saksham Singh</strong> (USN: <strong>24BTRAO035</strong>) • Course: <strong>Cloud DevOps (24CSE538)</strong> • October 2026
+  Candidate: <strong>Saksham Singh</strong> (USN: <strong>24BTRAO035</strong>) • Branch: <strong>AI DRIVEN DEVOPS</strong> • October 2026
 </div>
 
 </body>

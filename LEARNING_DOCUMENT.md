@@ -2,7 +2,7 @@
 **Assignment Topic**: Dynamic Test-Subset Routing  
 **Candidate Name**: Saksham Singh  
 **USN / Student ID**: 24BTRAO035  
-**Department / Track**: AI • DRIVE DEVOPS  
+**Branch**: AI DRIVEN DEVOPS  
 **Course**: Cloud DevOps (Unit III/IV Practicum)  
 **GitHub Repository Link**: [https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4](https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4)  
 
@@ -253,4 +253,4 @@ git push -u origin main
 ```
 
 ---
-*Candidate: Saksham Singh | USN: 24BTRAO035 | AI DRIVE DEVOPS • October 2026*
+*Candidate: Saksham Singh | USN: 24BTRAO035 | Branch: AI DRIVEN DEVOPS • October 2026*
