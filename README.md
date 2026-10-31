@@ -10,7 +10,7 @@
 **USN / Student ID**: 24BTRAO035  
 **Branch**: AI DRIVEN DEVOPS  
 **Course**: Automation Software (Unit III/IV Practicum)  
-**Repository**: [https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4](https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4)  
+**Repository**: [https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4](https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4)  
 **Dossier Report**: [`Dynamic_Test_Subset_Routing_Learnings_Report.pdf`](Dynamic_Test_Subset_Routing_Learnings_Report.pdf) | [`LEARNING_DOCUMENT.md`](LEARNING_DOCUMENT.md)
 
 ---
@@ -56,8 +56,8 @@ Rather than executing monolithic regression suites on every commit, DTSR synthes
 
 ```bash
 # Clone the repository
-git clone https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4.git
-cd Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4
+git clone https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4.git
+cd Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4
 
 # Create and activate virtual environment
 python3 -m venv .venv

@@ -4,7 +4,7 @@
 **USN / Student ID**: 24BTRAO035  
 **Branch**: AI DRIVEN DEVOPS  
 **Course**: Automation Software (Unit III/IV Practicum)  
-**GitHub Repository Link**: [https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4](https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4)  
+**GitHub Repository Link**: [https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4](https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4)  
 
 ---
 
@@ -241,9 +241,9 @@ cd "/home/saksham/Pictures/A4 A3"
 git status
 
 # 3. Add GitHub Remote (Saksham Singh)
-git remote add origin https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4.git
+git remote add origin https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4.git
 # Or using SSH:
-# git remote add origin git@github.com:sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4.git
+# git remote add origin git@github.com:sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4.git
 
 # 4. Commit and push to main branch
 git add .
