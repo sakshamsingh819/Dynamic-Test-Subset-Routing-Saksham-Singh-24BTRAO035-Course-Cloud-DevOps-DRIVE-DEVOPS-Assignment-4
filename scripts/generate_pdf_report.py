@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 import weasyprint
 
-REPO_URL = "https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4"
+REPO_URL = "https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4"
 
 HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="en">
@@ -413,11 +413,11 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     <div style="font-size: 6.8pt; color: #93c5fd; text-transform: uppercase; font-weight: bold; margin-bottom: 2px;">
       🔗 DIRECT GITHUB REPOSITORY LINK (CLICK TO OPEN IN BROWSER):
     </div>
-    <a href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
-      https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4
+    <a href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4" target="_blank">
+      https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4
     </a>
     <div>
-      <a class="btn-open-repo" href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
+      <a class="btn-open-repo" href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4" target="_blank">
         🚀 CLICK HERE TO OPEN GITHUB REPOSITORY IN BROWSER &rarr;
       </a>
     </div>
@@ -691,7 +691,7 @@ To establish conceptual rigor, the key automation and software verification para
 <!-- 4. Step-by-Step Implementation Guide -->
 <h2>4. Step-by-Step Implementation Guide</h2>
 <p>
-The project was engineered through a disciplined 10-step methodology adhering to cloud automation standards:
+The project was engineered through a disciplined 10-step methodology adhering to software automation standards:
 </p>
 
 <h3>Step 1: Workspace Scaffolding & Virtual Environment Provisioning</h3>
@@ -951,7 +951,7 @@ The following technical evaluations substantiate the theoretical and practical m
 <div class="qa-box">
   <div class="qa-question">1. What is Dynamic Test-Subset Routing, and what fundamental CI/CD bottleneck does it address?</div>
   <div class="qa-answer">
-    Dynamic Test-Subset Routing is an intelligent CI optimization strategy that executes only the test suites impacted by an incoming code change instead of blindly running the entire regression test suite. It solves the scalability bottleneck of linear and quadratic growth in CI execution duration, reducing cloud runner queue times and developer feedback latency while conserving compute budgets.
+    Dynamic Test-Subset Routing is an intelligent CI optimization strategy that executes only the test suites impacted by an incoming code change instead of blindly running the entire regression test suite. It solves the scalability bottleneck of linear and quadratic growth in CI execution duration, reducing CI runner queue times and developer feedback latency while conserving compute budgets.
   </div>
 </div>
 
@@ -1006,11 +1006,11 @@ The repository is fully provisioned with Git history and configured with the can
   <div style="font-weight: bold; color: #1e40af; font-size: 8.5pt; margin-bottom: 2px;">
     🔗 Official GitHub Repository Submission Link (Click to Open in Browser):
   </div>
-  <a href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
-    https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4
+  <a href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4" target="_blank">
+    https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4
   </a>
   <div style="margin-top: 5px;">
-    <a class="btn-open-repo" href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4" target="_blank">
+    <a class="btn-open-repo" href="https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4" target="_blank">
       🌐 DIRECT LAUNCH REPOSITORY IN BROWSER &rarr;
     </a>
   </div>
@@ -1020,7 +1020,7 @@ The repository is fully provisioned with Git history and configured with the can
 cd "/home/saksham/Pictures/A4 A3"
 
 # Cloned and Linked Remote Target (Saksham Singh - AI DRIVEN DEVOPS)
-git remote add origin https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Cloud-DevOps-DRIVE-DEVOPS-Assignment-4.git
+git remote add origin https://github.com/sakshamsingh819/Dynamic-Test-Subset-Routing-Saksham-Singh-24BTRAO035-Course-Automation-Software-Assignment-4.git
 
 # Push Complete Foundation to GitHub
 git branch -M main
